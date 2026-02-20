@@ -1,0 +1,51 @@
+{
+    "name": "api-skeleton/hello-world",
+    "type": "project",
+    "description": "The Hello world API example.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.5",
+        "bref/bref": "^3.0",
+        "bref/laravel-bridge": "^3.0",
+        "laravel/framework": "^12.0",
+        "laravel/octane": "^2.14"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.9",
+        "laravel/pint": "^1.24",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "HelloWorld\\App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HelloWorld\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

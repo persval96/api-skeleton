@@ -1,0 +1,12 @@
+**/vendor
+**/.idea
+**/storage/**/*
+!**/storage/**/.gitkeep
+**/bootstrap/cache/*
+!**/bootstrap/cache/.gitkeep
+**/.env
+!**/.env.example
+**/.terraform
+**/*.zip
+**/.phpunit.cache
+composer.lock
