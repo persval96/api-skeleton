@@ -1,0 +1,36 @@
+{
+  "name": "appkweb/ttc-api",
+  "description": "The skeleton api",
+  "type": "api",
+  "license": "private",
+  "authors": [
+    {
+      "name": "Valentin REGNIER",
+      "email": "valentin.regnier951996@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "endpoints/hello-world/app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "endpoints/hello-world/tests"
+    }
+  },
+  "require": {
+    "php": "^8.5",
+    "laravel/framework": "^13.0"
+  },
+  "require-dev": {
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": []
+}

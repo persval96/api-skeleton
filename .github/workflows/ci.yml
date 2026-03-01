@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+env:
+  AWS_REGION: eu-west-3
+  ECR_REPOSITORY: api-skeleton
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::944708720531:role/github-ci
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Set ECR registry
+        run: echo "ECR_REGISTRY=${{ steps.login-ecr.outputs.registry }}" >> $GITHUB_ENV
+
+      - name: Install dependencies
+        run: make composer-install
+
+      - name: Analyze code (PHPStan/Larastan)
+        run: make analyze
+
+      - name: Check code format (Pint)
+        run: make pint-check
+
+      - name: Run tests with coverage (PHPUnit)
+        run: make test-coverage
