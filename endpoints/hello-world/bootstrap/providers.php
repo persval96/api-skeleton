@@ -1,5 +1,7 @@
 <?php
 
+use HelloWorld\App\Providers\AppServiceProvider;
+
 return [
-    HelloWorld\App\Providers\AppServiceProvider::class,
+    AppServiceProvider::class,
 ];

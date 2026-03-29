@@ -7,8 +7,8 @@
 Clone it. Add your routes. Ship.
 
 [![PHP](https://img.shields.io/badge/PHP-8.5-777BB4?style=flat-square&logo=php&logoColor=white)](https://php.net)
-[![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=flat-square&logo=laravel&logoColor=white)](https://laravel.com)
-[![Bref](https://img.shields.io/badge/Bref-3.0-F28D1A?style=flat-square&logo=amazonaws&logoColor=white)](https://bref.sh)
+[![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?style=flat-square&logo=laravel&logoColor=white)](https://laravel.com)
+[![Bref](https://img.shields.io/badge/Bref-3.1-F28D1A?style=flat-square&logo=amazonaws&logoColor=white)](https://bref.sh)
 [![AWS Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=awslambda&logoColor=white)](https://aws.amazon.com/lambda)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-22c55e?style=flat-square)](#)
 [![License](https://img.shields.io/badge/license-MIT-6366f1?style=flat-square)](#)
