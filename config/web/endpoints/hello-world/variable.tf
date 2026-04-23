@@ -1,10 +1,10 @@
 variable "lambda_config" {
   type = object({
-    layer_arn:string
-    architecture: string
-    handler:string
-    bref_loop_max: string
-    memory_size: number
+    layer_arn : string
+    architecture : string
+    handler : string
+    bref_loop_max : string
+    memory_size : number
   })
 }
 
