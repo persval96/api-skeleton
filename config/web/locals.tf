@@ -14,7 +14,7 @@ locals {
     architecture  = "arm64"
     handler       = "Bref\\LaravelBridge\\Http\\OctaneHandler"
     bref_loop_max = "250"
-    memory_size = 1024
+    memory_size   = 1024
   }
 
   base_domain = {

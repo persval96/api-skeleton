@@ -9,9 +9,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "api-skeleton-terraform-tfstate"
-    key     = "terraform.tfstate"
+    bucket  = "persval96-dev-terraform-tfstate-eu-west-3"
+    key     = "api-skeleton.tfstate"
     region  = "eu-west-3"
     encrypt = true
   }
+
 }
