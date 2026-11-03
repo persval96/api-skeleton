@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: 944708720531.dkr.ecr.eu-west-3.amazonaws.com/nginx:latest
+    image: 646424554834.dkr.ecr.eu-west-3.amazonaws.com/nginx:latest
     ports:
       - "80:80"
     links:
@@ -10,7 +10,7 @@ services:
       - ../..:/var/www/html
   php:
     container_name: php
-    image: 944708720531.dkr.ecr.eu-west-3.amazonaws.com/php85:latest
+    image: 646424554834.dkr.ecr.eu-west-3.amazonaws.com/php85:latest
     volumes:
       - ../..:/var/www/html
       - ~/.composer:/root/.composer

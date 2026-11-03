@@ -45,7 +45,7 @@ up-docker-chmod:
 docker-login:
 	aws --profile dev --region eu-west-3 ecr get-login-password | \
 	  docker login --username AWS --password-stdin \
-	  944708720531.dkr.ecr.eu-west-3.amazonaws.com
+	  646424554834.dkr.ecr.eu-west-3.amazonaws.com
 
 
 ##
@@ -92,7 +92,7 @@ TF_CMD=$(DOCKER) run --rm \
 	-v $(HOME)/.aws/credentials:/root/.aws/credentials:ro \
 	-e AWS_PROFILE=$(profile) \
 	-w /workspace \
-	944708720531.dkr.ecr.eu-west-3.amazonaws.com/terraform:latest \
+	646424554834.dkr.ecr.eu-west-3.amazonaws.com/terraform:latest \
 	terraform -chdir=config/web
 
 tf-init: ## Run terraform init (use profile=xxx)
